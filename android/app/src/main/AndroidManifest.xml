@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.orgnu.hw_reader">
    <application
-        android:label="hw_reader"
+        android:label="Oxuyucu"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

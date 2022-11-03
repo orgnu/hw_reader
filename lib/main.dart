@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hw_reader/presentation/page/home/home.page.dart';
+import 'package:hw_reader/presentation/shared/palette/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,15 +10,19 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomePage(),
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) {
+        return MaterialApp(
+          title: 'Flutter Demo',
+          theme: AppTheme.light,
+          home: const HomePage(),
+        );
+      },
     );
   }
 }

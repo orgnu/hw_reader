@@ -5,10 +5,7 @@ import 'package:hw_reader/config/path.constants.dart';
 import 'package:hw_reader/config/size.constants.dart';
 import 'package:tflite/tflite.dart';
 
-final _canvasCullRect = Rect.fromPoints(
-  const Offset(0, 0),
-  Offset(SizeConstants.imageSize, SizeConstants.imageSize),
-);
+final _canvasCullRect = Rect.fromPoints(const Offset(0, 0), Offset(SizeConstants.imageSize, SizeConstants.imageSize));
 
 final _whitePaint = Paint()
   ..strokeCap = StrokeCap.round
@@ -19,12 +16,7 @@ final _bgPaint = Paint()..color = Colors.black;
 
 class TensorflowService {
   Future loadModel() {
-    Tflite.close();
-
-    return Tflite.loadModel(
-      model: PathConstants.model,
-      labels: PathConstants.labels,
-    );
+    return Tflite.loadModel(model: PathConstants.model, labels: PathConstants.labels);
   }
 
   dispose() {

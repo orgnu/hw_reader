@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:hw_reader/config/size.constants.dart';
+import 'package:hw_reader/presentation/shared/palette/palette.dart';
 
 class DrawingPainter extends CustomPainter {
   final List<Offset> points;
@@ -10,7 +11,7 @@ class DrawingPainter extends CustomPainter {
 
   final Paint _paint = Paint()
     ..strokeCap = StrokeCap.round
-    ..color = Colors.black
+    ..color = Palette.red
     ..strokeWidth = SizeConstants.strokeWidth;
 
   @override
