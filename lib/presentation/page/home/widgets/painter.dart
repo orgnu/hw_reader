@@ -11,7 +11,7 @@ class DrawingPainter extends CustomPainter {
 
   final Paint _paint = Paint()
     ..strokeCap = StrokeCap.round
-    ..color = Palette.red
+    ..color = Palette.main
     ..strokeWidth = SizeConstants.strokeWidth;
 
   @override

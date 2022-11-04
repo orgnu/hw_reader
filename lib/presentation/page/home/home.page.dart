@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hw_reader/data/cubit/recognition/recognition_cubit.dart';
+import 'package:hw_reader/data/cubit/recognition/recognition.cubit.dart';
 import 'package:hw_reader/presentation/page/home/home.body.dart';
 import 'package:hw_reader/presentation/shared/palette/palette.dart';
 

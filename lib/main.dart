@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hw_reader/presentation/page/home/home.page.dart';
 import 'package:hw_reader/presentation/shared/palette/theme.dart';
 
+import 'presentation/page/home/provider.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -20,7 +22,10 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           title: 'Flutter Demo',
           theme: AppTheme.light,
-          home: const HomePage(),
+          home: ChangeNotifierProvider(
+            create: (context) => HomeProvider(),
+            child: const HomePage(),
+          ),
         );
       },
     );
