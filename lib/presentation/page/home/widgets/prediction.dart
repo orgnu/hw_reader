@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hexagon/hexagon.dart';
 import 'package:hw_reader/data/model/prediction.model.dart';
 import 'package:hw_reader/presentation/page/home/widgets/number.dart';
 import 'package:hw_reader/presentation/shared/palette/palette.dart';
@@ -24,10 +23,9 @@ class PredictionWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     var styles = getPredictionStyles(predictions);
 
-    return HexagonWidget.flat(
-      color: Palette.white,
+    return Container(
       width: 375.w - 20,
-      cornerRadius: 20,
+      decoration: BoxDecoration(color: Palette.white, borderRadius: BorderRadius.circular(20.r)),
       child: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,

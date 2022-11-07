@@ -109,13 +109,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "7.2.0"
-  hexagon:
-    dependency: "direct main"
-    description:
-      name: hexagon
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.1.1"
   lints:
     dependency: transitive
     description:
@@ -228,4 +221,4 @@ packages:
     version: "2.1.2"
 sdks:
   dart: ">=2.18.2 <3.0.0"
-  flutter: ">=1.17.0"
+  flutter: ">=1.16.0"

@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hexagon/hexagon.dart';
 import 'package:hw_reader/presentation/page/home/provider.dart';
 import 'package:hw_reader/presentation/shared/palette/palette.dart';
 
@@ -12,16 +11,16 @@ class NumberWidget extends StatelessWidget {
   final PredictionModel? prediction;
   @override
   Widget build(BuildContext context) {
-    return HexagonWidget.flat(
-      padding: 12.r,
-      elevation: 0,
-      cornerRadius: 10,
-      inBounds: false,
-      color: prediction == null
-          ? Palette.main
-          : Palette.accent.withOpacity(
-              (prediction!.confidence * 2).clamp(0, 1).toDouble(),
-            ),
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10.r),
+        color: prediction == null
+            ? Palette.main
+            : Palette.accent.withOpacity(
+                (prediction!.confidence * 2).clamp(0, 1).toDouble(),
+              ),
+      ),
+      padding: EdgeInsets.all(12.r),
       width: 80.w,
       height: 85.h,
       child: Padding(
